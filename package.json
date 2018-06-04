@@ -1,0 +1,22 @@
+{
+  "name": "qa_engine",
+  "version": "1.0.0",
+  "description": "Stacj overflow like application for Woz-U",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jarec Turner",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-github": "^1.1.0",
+    "sequelize": "^4.37.10",
+    "sqlite": "^2.9.2"
+  }
+}
