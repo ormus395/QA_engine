@@ -3,4 +3,4 @@
 // Can have many tags
 // one module
 // one lesson
-// Question = {title, body, comment, tags, module,lesson, userId, answerId}
+// Question = {title, body, comments, tags, module,lesson, userId, answerId}
