@@ -8,7 +8,7 @@ const port = process.env.PORT || 5000;
 const models = require("./db");
 const { answers, questions, user, tags, comments } = require("./routes/api");
 const auth = require("./routes/auth/auth");
-
+require("./services/passport")(passport);
 // MW
 app.use(morgan("dev"));
 app.use(bodyParser.json());
@@ -18,7 +18,7 @@ app.use(passport.session());
 
 // Routes
 app.use("/api", [answers, questions, user, tags, comments]);
-
+app.use("/", auth);
 models.sequelize.sync().then(() => {
   app.listen(port, () => {
     console.log("Server started on " + port);

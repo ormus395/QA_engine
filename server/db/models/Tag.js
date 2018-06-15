@@ -5,7 +5,9 @@ module.exports = function(sequelize, Types) {
     title: Types.STRING
   });
 
-  Tag.associate = function(models) {};
+  Tag.associate = function(models) {
+    models.Tag.belongsTo(models.Question);
+  };
 
   return Tag;
 };

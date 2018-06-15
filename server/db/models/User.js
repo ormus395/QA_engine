@@ -5,11 +5,11 @@
 
 module.exports = function(sequelize, Types) {
   let User = sequelize.define("User", {
+    githubId: Types.STRING,
     name: Types.STRING,
     username: Types.STRING,
-    track: { type: Types.ENUM, values: ["JavaScript", ".Net", "Ruby", "Java"] },
     email: Types.STRING,
-    avatar: Types.STRING
+    avatar_url: Types.STRING
   });
 
   User.associate = function(models) {

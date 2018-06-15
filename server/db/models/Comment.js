@@ -5,6 +5,9 @@ module.exports = function(sequelize, Types) {
     body: Types.STRING
   });
 
-  Comment.associate = function(models) {};
+  Comment.associate = function(models) {
+    models.Comment.belongsTo(models.Question);
+    models.Comment.belongsTo(models.User);
+  };
   return Comment;
 };

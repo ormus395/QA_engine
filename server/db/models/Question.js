@@ -21,6 +21,7 @@ module.exports = function(sequelize, Types) {
     models.Question.hasMany(models.Comment);
     models.Question.hasMany(models.Answer);
     models.Question.hasMany(models.Tag);
+    models.Question.hasMany(models.Comment);
   };
 
   return Question;
